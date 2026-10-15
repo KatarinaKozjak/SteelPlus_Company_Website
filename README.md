@@ -57,19 +57,24 @@ The following screenshots showcase the main pages and visual design of the websi
 
 ### Home Page
 
-![Home Page](screenshots/home.png)
+![Home Page](screenshots/home1.PNG)
+![Home Page](screenshots/home2.PNG)
+![Home Page](screenshots/home3.PNG)
+![Home Page](screenshots/home4.PNG)
 
 ### Projects Portfolio
 
-![Projects Portfolio](screenshots/projects.png)
+![Projects Portfolio](screenshots/projects.PNG)
+![Projects Portfolio](screenshots/projects2.PNG)
+![Projects Portfolio](screenshots/projects3.PNG)
 
 ### About Us
 
-![About Us](screenshots/about.png)
+![About Us](screenshots/about-us.PNG)
 
 ### Contact Page
 
-![Contact Page](screenshots/contact.png)
+![Contact Page](screenshots/contact.PNG)
 
 ## 4. Project Structure
 
