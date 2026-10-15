@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background:rgb(33, 98, 141);
+    border-radius: 40px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(28, 72, 102);
+    border-radius: 40px;
+}
+::-webkit-scrollbar-track{
+    background: gray;
+    border-radius: 80px;
+}
+.header{
+    width: 100%;
+    position: relative;
+}
+.header img{
+    width: 40%;
+    height: 60%;
+    border-radius: 14px;
+}
+nav{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 550;
+    border-radius: 6.5px;
+}
+nav ul li::after{ /*linije ispod navigacije*/
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: rgb(66, 134, 180);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+/*o firmi---------------------------*/
+.of{
+    position: relative;
+    display: flex;
+    width: 95%;
+    background: rgb(33, 98, 141);
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.of .ofi{/*element u kome će se
+    nalaziti sadržaj podeljen u 
+    dve kolone*/
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.of .ofi .ofirmi{
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.of .ofi .ofirmi .ofsl{/*pozicija slika
+    koja će biti na jednoj polovini*/
+    max-width: 600px;
+    padding: 5px;
+    margin-top: 55px;
+    margin-right: 50px;
+    flex: 0 0 600px;
+}
+/*pozicija svake slike u listi*/
+.of .ofi .ofirmi .ofsl ul{
+    padding: 10px;
+    margin-left: 10px;
+}
+.of .ofi .ofirmi .ofsl li{
+    /*jedno ispod drugog*/
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+.of .ofi .ofirmi .ofsl img{
+    width: 100%;
+    height: 98%;
+}
+.of .ofi .ofirmi .oftx{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+}
+.of .ofi .ofirmi .oftx h3{
+    font-size: 28px;
+    color: gray;
+    background: white;
+    font-weight: 500;
+}
+.of .ofi .ofirmi .oftx p{
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+}
+@media screen and (max-width: 1330px) and (min-width: 800px){
+    .header img{
+        width: 30%;
+        height: 50%;
+        border-radius: 14px;
+    }
+    nav ul li a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: 550;
+        border-radius: 6.5px;
+    }
+    /*kako će izgledati strana kada joj se 
+    širina smanjuje ili povećava*/
+    /*kartice*/
+    .of{
+        width: 90%;
+        margin: auto;
+    }
+    .of .ofi .ofirmi .ofsl{
+        max-width: 500px;
+        padding: 5px;
+        margin-top: 55px;
+        margin-right: 20px;
+        flex: 0 0 500px;
+    }
+    .of .ofi .ofirmi .oftx{
+        margin-left: 5px;
+        margin-top: 10px;
+        width: 95%;
+        height: auto;
+    }
+    .of .ofi .ofirmi .ofsl img{
+        width: 100%;
+        height: 95%;
+    }
+    .of .ofi .ofirmi .oftx h3{
+        font-size: 24px;
+        color: gray;
+        background: white;
+        font-weight: 500;
+    }
+    .of .ofi .ofirmi .oftx p{
+        font-size: 18px;
+        color: white;
+    }
+}
+@media screen and (min-width: 1330px) and (max-width: 1550px){
+    .header img{
+        width: 34%;
+        height: 54%;
+        border-radius: 14px;
+    }
+    nav ul li a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 1.25em;
+        font-weight: 550;
+        border-radius: 6.5px;
+    }
+    /*kartice*/
+    .of{
+        width: 90%;
+        margin: auto;
+    }
+    .of .ofi .ofirmi .ofsl{
+        max-width: 550px;
+        padding: 5px;
+        margin-top: 55px;
+        margin-right: 20px;
+        flex: 0 0 550px;
+    }
+    .of .ofi .ofirmi .oftx{
+        margin-left: 5px;
+        margin-top: 10px;
+        width: 95%;
+        height: auto;
+    }
+    .of .ofi .ofirmi .ofsl img{
+        width: 95%;
+        margin-top: 36px;
+        height: 85%;
+    }
+    .of .ofi .ofirmi .oftx h3{
+        font-size: 26px;
+        color: gray;
+        background: white;
+        font-weight: 500;
+    }
+    .of .ofi .ofirmi .oftx p{
+        font-size: 20px;
+        color: white;
+    }
+}
+/*drugi tekst*/
+.dal{
+    position: relative;
+    display: flex;
+    width: 80%;
+    background: gray;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.dal .daltx{
+    width: 100%;
+    padding: 5px;
+}
+.dal .daltx h3{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.dal .daltx p{
+    font-size: 20px;
+    color: white;
+}
+/*treci tekst
+.dal1{
+    position: relative;
+    display: flex;
+    width: 95%;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.811);
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.dal1 .daltx1{
+    width: 100%;
+    padding: 5px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.dal1 .daltx1 h2{
+    color: rgb(33, 98, 141);
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+.dal1 .daltx1 h4{
+    color: rgb(33, 98, 141);
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.dal1 .daltx1 ul li{
+    margin-left: 18px;
+    color: rgb(33, 98, 141);
+}
+.dal1 .daltx1 p{
+    font-size: 20px;
+    color: rgb(33, 98, 141);
+}*/

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Steel Plus-Kontakt</title>
+    <link rel="stylesheet" type="text/css" href="kontakt.css">
+</head>
+<body>
+    <!--Navigacija-->
+    <section class="header">
+        <nav>
+            <a href="S1.html" class="logo"><img src="logo.bmp"></a>
+            <ul>
+                <li><a href="S1.html"> Početak </a></li>
+                <li><a href="Projekti.html"> Naši Projekti </a></li>
+                <li><a href="Onama.html"> O Nama </a></li>
+                <li><a href="#kontakt"> Kontakt </a></li>
+            </ul>
+        </nav>
+    </section>
+    <br><br>
+    <div class="box"><!--Glavna kutija gde se sve nalazi-->
+        <div class="b2"><!--Jedna manja kutija da se odvoji forma od ostalog-->
+            <div class="poz">
+                <div class="form">
+                    <h2 id="kontakt">Pisite Nam</h2>
+                    <form action="Kontakt.php" method="POST">
+                    <input type="text" name="ime" id="ime" class="field" placeholder="Ime" maxlength="100" required />
+                    <input type="text" name="prezime" id="prezime" class="field" placeholder="Prezime" maxlength="100" />
+                    <input type="email" name="mejl" id="email" class="field" placeholder="E-mail" maxlength="254" required />
+                    <input type="tel" name="brtl" id="brtel" class="field" placeholder="Broj telefona" maxlength="30"/>
+                    <textarea name="poruka" id="poruka" class="field-area" placeholder="Poruka" maxlength="5000" required ></textarea>
+                    <button type="submit" class="field-submit"> Pošalji </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="b2"><!--druga manja kutija za odvajanje-->
+            <div class="info">
+                <div class="info-b">
+                    <h3>Kontakt Info</h3>
+                    <div class="ib">
+                        <ul>
+                            <li>
+                                <div class="direktor">
+                                    <span><ion-icon name="person"></ion-icon></span>
+                                    <span>Svetlana Petrović Pavlović</span>
+                                </div>
+                            </li>
+                            <li>    
+                                <div class="mejl">
+                                    <span><ion-icon name="mail"></ion-icon></span>
+                                    <a href="mailto:steelplus@gmail.com">steelplus@gmail.com</a>
+                                </div>
+                            </li>
+                            <li>    
+                                <div class="tel">
+                                    <span><ion-icon name="call"></ion-icon></span>
+                                    <a href="tel:+381987654321">+381 11 3970 321</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="map"><!--Mapa sa lokacijom firme-->
+                <div class="map-b">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2002.5713859807627!2d20.46888566359686!3d44.7795084344426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a70434ee02e3f%3A0x372995b2805a5461!2z0JPQtdC90LXRgNCw0LvQsCDQkNC90YDQuNGY0LAgMjUsINCR0LXQvtCz0YDQsNC0!5e0!3m2!1ssr!2srs!4v1640107644399!5m2!1ssr!2srs"
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

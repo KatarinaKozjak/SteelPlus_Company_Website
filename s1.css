@@ -1,0 +1,447 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background:rgb(33, 98, 141);
+    border-radius: 40px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(28, 72, 102);
+    border-radius: 40px;
+}
+::-webkit-scrollbar-track{
+    background: gray;
+    border-radius: 80px;
+}
+/*Navigacija i pozadina pocetne slike---------------------------------*/
+.header{
+    min-height: 90vh;
+    width: 100%;
+    /*vreme na koliko se menja slika
+    i način na koji to radi*/
+    animation: animate 18s ease-in-out infinite;
+    background-image:linear-gradient(rgba(4, 9, 30, 0.51),rgba(4,9,30,0.6));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/*menja se slika
+po redosledu kako je napisano*/
+@keyframes animate{
+    0%,100%{
+        background-image: url(22.jpg);
+    }
+    25%{
+        background-image: url(11.jpg);
+    }
+    50%{
+        background-image: url(3.jpg);
+    }
+    75%{
+        background-image: url(44.jpg);
+    }
+}
+.header img{
+    width: 40%;
+    height: 60%;
+    border-radius: 14px;
+}
+nav{
+    display: flex;
+    padding: 10px 15px 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-lin{
+    flex: 1;
+    text-align: right;
+}
+.nav-lin ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px 13px;
+    position: relative;
+}
+.nav-lin ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.23em;
+    font-weight: 550;
+    border-radius: 6.5px;
+}
+.header.sticky .logo,
+.header.sticky ul li a
+{
+    color: rgba(105, 105, 105, 0.637);
+}
+.nav-lin ul li::after{ /*linije ispod navigacije*/
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: rgb(66, 134, 180);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-lin ul li:hover::after{
+    width: 100%;
+}
+.header .txtb{
+    display: flex;
+    width: 30%;
+    height: auto;
+    position: absolute;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 20px;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.header .txtb h1{
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 3em;
+    font-weight: 700;
+    color: rgb(33, 98, 141);
+    margin: auto;
+}
+nav .fa{
+    display: none;
+}
+/*@media(min-width:1500px){
+    .txtb{
+        width: 33%;
+        height: 8%;
+    }
+    .txtb h1{
+        font-size: 3vw;
+        text-align: center;
+    }
+}*/
+/*@media(mix-width:1500px){
+    .txtb{
+        width: 33%;
+        height: 8%;
+    }
+    .txtb h1{
+        font-size: 3vw;
+        text-align: center;
+    }
+}*/
+/*@media(max-width:1300px){
+    .txtb{
+        width: 33%;
+        height: 9%;
+    }
+    .txtb h1{
+        font-size: 2.5em;
+        text-align: center;
+    }
+}
+@media(max-width:1111px) {
+    .txtb{
+        width: 35%;
+        height: 10%;
+    }
+    .txtb h1{
+        font-size: 1.3 em;
+        text-align: center;
+    }
+}
+@media(max-width: 700px){
+    .txtb{
+        width: 30%;
+        height: 8%;
+    }
+    .txtb h1{
+        font-size: 1.45em;
+    }
+    .pbtn{
+        margin-top: 10px;
+    }
+    .nav-lin ul li{
+        display: block;
+    }
+    .nav-lin {
+        position: absolute;
+        background: rgba(105, 105, 105);
+        height: 100vh;
+        width: 150px;
+        top: 0;
+        left: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    nav .fa{
+        display: block;
+        color: rgb(33, 98, 141);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}*/
+/*Prvi tekst kad se skroluje-------------------------------*/
+.malon{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    padding-top: 70px;
+}
+.malon h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+.malon p{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+/*Kartice--------------------------*/
+.glavno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+.kart{/*pravljenje pozicije i dizajna za svaku od kartica*/
+    position: relative;width: 270px;height: 415px;
+    margin: 40px 70px;
+    background: gray;border-radius: 20px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    box-shadow: 0 15px 0 black,inset 0 -15px 0 rgba(0,0,0,0.5),0 25px 0 rgba(0,0,0,0.15);
+    overflow: hidden;display: flex;
+    justify-content: center;
+    align-items: flex-start;}
+/*za koju karticu biramo koju promenu boja*/
+.kart:nth-child(1){
+    background: linear-gradient(to bottom,#1f99e0,#949493);}
+.kart:nth-child(2){
+    background: linear-gradient(to bottom,#949493,#1f99e0);}
+.kart:nth-child(3){
+    background: linear-gradient(to bottom,#1f99e0,#949493);}
+.ikona{
+    position: relative;width: 110px;height: 90px;
+    background: white;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 10px 0 rgba(0,0,0,0.1),inset 0 -8px 0 black;
+    z-index: 1000;display: flex;
+    justify-content: center;
+}
+.ikona ion-icon{/*izigled ikona iznad kartica*/
+    position: relative;color: gray;
+    font-size: 5em;
+    z-index: 10000;
+    --ionicon-stroke-width: 20px;
+}
+.sadr{
+    position: absolute;
+    width: 100%;
+    padding: 25px;
+    padding-top: 110px;
+    text-align: center;
+}
+.sadr h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.sadr p{
+    line-height: 1.3em;
+    color: white;
+}
+.pbtn{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(33, 98, 141);
+    font-size: 1.2em;
+    font-weight: 450;
+    border: 2.5px solid rgb(33, 98, 141);
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.pbtn:hover{
+    border: 2.5px solid rgb(33, 98, 141);
+    background: rgba(196, 196, 196, 0.561);
+    transition: 0.5s;
+}
+/*Projekti---------------------------------------*/
+.proj{
+    background: rgba(105, 105, 105);
+    padding-top: 15px;
+    padding-bottom: 35px;}
+.proj .proj-text{
+    max-width: 800px;
+    margin: 0 auto;}
+.proj .red{
+    position: relative;
+    text-align: center;
+    width: 100%;}
+.proj h3{
+    align-content: center;
+    font-weight: 600;
+    font-size: 2em;}
+.proj p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3em;}
+.proj .red .slproj{ /*poziciranje slika projekata u posebnim kutijama*/
+    position: relative;display: grid;
+    align-content: center;
+    grid-template-columns:repeat(auto-fit, minmax(400px,1fr));
+    grid-gap: 40px;
+    max-width: 100%;margin-top: 50px;}
+.proj .red .slproj .rad{ /*zapravo dimenzije kutijica*/
+    position: relative;background: rgb(111, 124, 241);
+    min-height: 370px;width: 400px;
+    margin: 0 auto;display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;}
+.proj img{
+    width: 400px;
+    height: 370px;
+    border-radius: 10px;}
+.folija{ /*sloj preko slike*/
+    width: 100%;height: 100%;
+    position: absolute;top: 0;
+    border-radius: 10px;cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.6),rgb(34, 99, 142));
+    opacity: 0;transition: 1s;}
+.proj .red .slproj .rad:hover .folija{
+    opacity: 1;}
+.opis{ /*tekst na foliji kada se hoveruje preko slika*/
+    width: 80%;margin: auto;
+    position: absolute;bottom: 0%;
+    left: 50%;opacity: 0;
+    transform: translateX(-50%);
+    color: white;transition: 1s;
+}
+hr{
+    background: white;
+    height: 2px;
+    border: 0;
+    margin: auto;
+    width: 90%;
+}
+.proj .red .rad .opis a{
+    text-decoration: none;
+    color: white;
+}
+.proj .red .rad .opis h3{
+    font-weight: 500;
+}
+.proj .red .rad .opis p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.proj .red .slproj .rad:hover .opis{
+    bottom: 25%;
+    opacity: 1;
+}
+/*Komentari----------------------------------*/
+.com{
+    width: 80%;
+    margin: auto;
+    padding-top: 60px;
+    text-align: center;
+}
+.row{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+.com h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+.com-col{
+    flex-basis: 44%;
+    margin-bottom: 5%;
+    text-align: left;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.618);
+}
+.com-col img{
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.com-col p{
+    padding: 0;
+}
+.com-col h3{
+    margin-top: 10px;
+    text-align: left;
+}
+@media(max-width: 700px){
+    .com-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+.com1{
+    width: 80%;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+}
+.com1 h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+/*Kontakt--------------------------------------*/
+.kon{
+    margin: 100px auto;
+    width: 80%;
+    height: 60%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(work.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    text-align: center;
+    padding: 100px 0;
+}
+.kon h1{
+    color: white;
+    padding: 0;
+    font-weight: 500;
+    font-size: 1.6em;
+}
+.kon-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 450;
+    border: 2.5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: transparent;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.kon-btn:hover{
+    border: 2.5px solid rgb(255, 255, 255);
+    background: rgba(50, 135, 192, 0.534);
+    transition: 0.5s;
+}

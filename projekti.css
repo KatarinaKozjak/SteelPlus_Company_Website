@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+body{
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background:rgb(33, 98, 141);
+    border-radius: 40px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(28, 72, 102);
+    border-radius: 40px;
+}
+::-webkit-scrollbar-track{
+    background: gray;
+    border-radius: 80px;
+}
+.header{
+    width: 100%;
+    position: relative;
+}
+.header img{
+    width: 40%;
+    height: 60%;
+    border-radius: 14px;
+}
+nav{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 550;
+    border-radius: 6.5px;
+}
+nav ul li::after{ /*linije ispod navigacije*/
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: rgb(66, 134, 180);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+/*Prvi projekat-----------------*/
+.r1{ /*prostor na stranici gde ce biti 
+    smesten tekst sa slikom,jedno pored drugog*/
+    position: relative;
+    display: flex;
+    width: 85%; /*sirina mog section elementa*/
+    background: gray; /*pozadinska boja*/
+    padding: 5px;
+    border-radius: 10px;/*zaobljene ivice okvira*/
+    margin: auto;
+}
+.r1 .rd1{/*div element koji će svoj sadržaj
+    podeliti u dve kolone u okviru section elementa*/
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.r1 .rd1 .rad1{/*div element koji sadrži sliku i
+    tekst u dve kolone*/
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+.r1 .rd1 .rad1 .rd1sl{/*div element u kome se 
+    nalazi slika projekta*/
+    max-width: 550px; /*maksimalna širina slike*/
+    padding: 5px;
+    margin-top: 15px;
+    flex: 0 0 550px; /*širina jedne kolone gde je slika*/
+}
+.r1 .rd1 .rad1 .rd1sl img{
+    /*širina i visina slike*/
+    width: 510px;
+    height: 530px;
+}
+.r1 .rd1 .rad1 .rd1tx{/*div element koji sadrži tekst*/
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 90%;/*od ukupne širine kolone, tekst će
+               biti širine samo 90%*/
+}
+.r1 .rd1 .rad1 .rd1tx h3{/*naslov projekta*/
+    font-size: 28px;
+    font-weight: 600;
+}
+.r1 .rd1 .rad1 .rd1tx p{/*tekst projekta*/
+    font-size: 24px;
+}
+/*Drugi projekat-------------------------------------------------*/
+.r2{
+    position: relative;
+    display: flex;
+    width: 85%;
+    background: rgb(28, 72, 102);
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.r2 .rd2{
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.r2 .rd2 .rad2{
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+.r2 .rd2 .rad2 .rd2tx{
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 90%;
+}
+.r2 .rd2 .rad2 .rd2tx h3{
+    font-size: 28px;
+    font-weight: 600;
+}
+.r2 .rd2 .rad2 .rd2tx p{
+    font-size: 24px;
+}
+.r2 .rd2 .rad2 .rd2sl{
+    max-width: 550px;
+    padding: 5px;
+    margin-top: 15px;
+    flex: 0 0 550px;
+}
+.r2 .rd2 .rad2 .rd2sl img{
+    width: 510px;
+    height: 530px;
+}
+/*Treci projekat*/
+.r3{
+    position: relative;
+    display: flex;
+    width: 85%;
+    background: white;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.719);
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: auto;
+}
+.r3 .rd3{
+    position: relative;
+    width: 95%;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.r3 .rd3 .rad3{
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+.r3 .rd3 .rad3 .rd3sl{
+    max-width: 550px;
+    padding: 5px;
+    margin-top: 15px;
+    flex: 0 0 550px;
+}
+.r3 .rd3 .rad3 .rd3sl img{
+    width: 510px;
+    height: 530px;
+}
+.r3 .rd3 .rad3 .rd3tx{
+    margin-right: 10px;
+    margin-top: 20px;
+    width: 90%;
+}
+.r3 .rd3 .rad3 .rd3tx h3{
+    font-size: 28px;
+    font-weight: 600;
+}
+.r3 .rd3 .rad3 .rd3tx p{
+    font-size: 24px;
+}
